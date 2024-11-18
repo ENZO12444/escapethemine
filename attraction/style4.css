@@ -1,0 +1,112 @@
+/* Style général */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    background-image: url('blood-splatters.png'); /* Fond avec taches de sang */
+    background-size: cover;
+    background-position: center;
+    animation: bloodEffect 3s infinite alternate; /* Animation de fond de taches de sang */
+}
+
+/* En-tête centré sans animation */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(26, 26, 26, 0.9); /* Fond légèrement transparent */
+    border-bottom: 2px solid red;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.logo-image {
+    width: 100px;
+    height: auto;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: red;
+    text-shadow: 0 0 10px red, 0 0 20px red; /* Effet de lumière sur hover */
+}
+
+/* Section Plan du Parc */
+.park-map {
+    text-align: center;
+    padding: 40px;
+    animation: fadeInUp 1.5s ease-out;
+    margin-top: 40px;
+}
+
+.park-map h2 {
+    font-family: 'Creepster', cursive;
+    font-size: 48px;
+    color: red;
+    text-shadow: 0 0 10px rgba(255, 0, 0, 1), 0 0 20px rgba(255, 0, 0, 0.8);
+    animation: flicker 1.5s infinite alternate; /* Animation de clignotement du titre */
+}
+
+.map-container {
+    max-width: 800px;
+    margin: 0 auto;
+    border: 4px solid red;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.6);
+    overflow: hidden; /* Empêche l'image de sortir du cadre */
+}
+
+.map-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover; /* Permet de maintenir les proportions de l'image sans dépasser */
+    animation: bloodSplash 2s infinite alternate; /* Animation des taches de sang */
+}
+
+/* Pied de page */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(26, 26, 26, 0.9);
+    border-top: 2px solid red;
+}
+
+/* Animations */
+@keyframes bloodEffect {
+    0% { background-position: 0 0; }
+    100% { background-position: -100px -100px; }
+}
+
+@keyframes flicker {
+    0%, 100% { opacity: 1; text-shadow: 0 0 20px rgba(255, 0, 0, 1), 0 0 30px rgba(255, 0, 0, 1); }
+    50% { opacity: 0.3; text-shadow: none; }
+}
+
+@keyframes bloodSplash {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.05); opacity: 0.9; }
+}

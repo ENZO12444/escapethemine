@@ -1,0 +1,189 @@
+/* Général */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+/* En-tête */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #1a1a1a;
+    border-bottom: 2px solid red;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.logo-image {
+    width: 100px;
+    height: auto;
+    margin-right: 15px;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: red;
+}
+
+/* Section Hero */
+.hero {
+    height: 40vh;
+    background-image: url('images/horror-background.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
+}
+
+.hero-content {
+    margin-top: 0px;
+}
+
+.hero-content h2 {
+    font-family: 'Creepster', cursive;
+    font-size: 48px;
+    color: red;
+    text-shadow: 2px 2px 0 #000, 4px 4px 0 red;
+    animation: flicker 1.5s infinite alternate;
+}
+
+.hero-content p {
+    font-family: 'Nosifer', cursive;
+    font-size: 20px;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 2px #000;
+    animation: fadeIn 3s forwards;
+}
+
+.cta-button {
+    padding: 10px 20px;
+    font-size: 18px;
+    color: #121212;
+    background-color: red;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: darkred;
+}
+
+/* Section Horaires Escape Game */
+.escape-hours {
+    background-color: #1a1a1a;
+    padding: 40px;
+    text-align: center;
+    margin: 40px 0;
+    border: 2px solid red;
+    border-radius: 10px;
+}
+
+.escape-hours h3 {
+    font-family: 'Creepster', cursive;
+    font-size: 36px;
+    color: red;
+    text-shadow: 0 0 10px rgba(255, 0, 0, 1), 0 0 20px rgba(255, 0, 0, 0.8);
+    animation: flicker 1.5s infinite alternate;
+}
+
+.escape-hours p {
+    font-family: 'Nosifer', cursive;
+    font-size: 20px;
+    color: #ddd;
+    margin-bottom: 20px;
+}
+
+.hours-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.hours-list li {
+    font-size: 18px;
+    color: #fff;
+    margin: 10px 0;
+    font-family: 'Arial', sans-serif;
+    text-shadow: 1px 1px 5px #000;
+}
+
+/* Section Images Escape Game */
+.escape-images {
+    display: flex;
+    justify-content: center;
+    margin: 0px 0;
+}
+
+.image-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.escape-image {
+    width: 48%;
+    height: auto;
+    border: 4px solid red;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.6);
+    transition: transform 0.3s ease;
+}
+
+.escape-image:hover {
+    transform: scale(1.05);
+}
+
+/* Pied de page */
+footer {
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+    background-color: #121212;
+    border-top: 2px solid red;
+}
+
+/* Animations */
+@keyframes flicker {
+    0%, 100% { opacity: 1; text-shadow: 0 0 20px rgba(255, 0, 0, 1), 0 0 30px rgba(255, 0, 0, 1); }
+    50% { opacity: 0.3; text-shadow: none; }
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
